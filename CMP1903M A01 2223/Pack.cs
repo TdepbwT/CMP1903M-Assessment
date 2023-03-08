@@ -40,7 +40,7 @@ namespace CMP1903M_A01_2223
             }
         }
 
-        public static bool FisherYatesShuffle(List<Card> CreatePack)
+        private static bool FisherYatesShuffle(List<Card> CreatePack)
         {
             if (CreatePack == null || CreatePack.Count == 0)
             {
@@ -61,7 +61,7 @@ namespace CMP1903M_A01_2223
             return true;
         }
 
-        public static bool RiffleShuffle(List<Card> CreatePack)
+        private static bool RiffleShuffle(List<Card> CreatePack)
         {
             if (CreatePack == null || CreatePack.Count == 0)
             {
@@ -95,14 +95,9 @@ namespace CMP1903M_A01_2223
             return true;
         }
 
-        // return the pack of cards
-        public List<Card> Getcards()
-        {
-            return CreatePack();
-        }
 
 
-        public static Card DealCard(List<Card> hand) // deals the card at the top of the pack
+        public static Card DealCard(List<Card> hand) // deals the card at the top of the pack; don't even know if this works
         {
             Card card = hand[0];
             hand.RemoveAt(0);
@@ -113,7 +108,7 @@ namespace CMP1903M_A01_2223
         {
           List<Card> dealtCards = new List<Card>();
 
-          if (pack.Count < amount)
+          if (pack.Count < amount) // error handling
           {
             Console.WriteLine("Not enough cards in deck to deal");
             return dealtCards;

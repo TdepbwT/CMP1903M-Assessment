@@ -21,8 +21,8 @@ namespace CMP1903M_A01_2223
                 Console.WriteLine(card.ToString());
             }
 
-            //shuffle deck using fisher-yates algorithm
-            Console.WriteLine("Enter a shuffle method - 1 = Fisher-Yates, 2 = Ruffle");
+            //shuffle deck using chosen algorithm
+            Console.WriteLine("Enter a shuffle method - 1 = Fisher-Yates, 2 = Riffle");
             int ShuffleChoice = int.Parse(Console.ReadLine());
             pack.shuffleCardPack(ShuffleChoice, deck);
 
